@@ -16,6 +16,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY ./drizzle ./drizzle
 COPY ./migrations ./migrations
+COPY drizzle.config.ts .
 COPY package.json .
 
 # Mantiene il container attivo senza eseguire nulla automaticamente
